@@ -10,9 +10,9 @@ function verificarCertificado(){
     let certificados = {
 
         "SAUPA-2026-001": {
-            nome: "João Paulo Saupa ",
+            nome: "João Manuel António",
             curso: "Informática Profissional",
-            carga: "40 Horas",
+            carga: "40 horas",
             data: "24/07/2026"
         },
 
@@ -77,3 +77,5 @@ function verificarCertificado(){
     }
 
 }
+
+
