@@ -47,24 +47,28 @@ function verificarCertificado(){
 
         resultado.innerHTML = `
 
-        <h3>✅ Certificado Válido</h3>
+<div class="certificado">
 
-        <p><strong>Nome:</strong> ${certificado.nome}</p>
+<h3>✅ Certificado Válido</h3>
 
-        <p><strong>Curso:</strong> ${certificado.curso}</p>
+<p><strong>Nome:</strong> ${certificado.nome}</p>
 
-        <p><strong>Carga Horária:</strong> ${certificado.carga}</p>
+<p><strong>Curso:</strong> ${certificado.curso}</p>
 
-        <p><strong>Data de Emissão:</strong> ${certificado.data}</p>
+<p><strong>Carga Horária:</strong> ${certificado.carga}</p>
 
-        <p><strong>Código:</strong> ${codigo}</p>
+<p><strong>Data de Emissão:</strong> ${certificado.data}</p>
 
-        <br>
+<p><strong>Código:</strong> ${codigo}</p>
 
-        <p><strong>Emitido por:</strong><br>
-        Saupa Services</p>
+<div class="selo">
+Saupa Services<br>
+Certificado Autêntico
+</div>
 
-        `;
+</div>
+
+`;
 
     }
 
