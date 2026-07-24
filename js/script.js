@@ -24,6 +24,7 @@ function verificarCertificado(){
         }
 
         else if(certificado){
+          window.location.href = "certificado.html?codigo=" + certificado.codigo;  
 
             resultado.innerHTML = `
 
