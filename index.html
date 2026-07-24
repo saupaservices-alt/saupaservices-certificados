@@ -1,15 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt"> 
+<html lang="pt">
 <head>
-   <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
-    <title>Saupa Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saupa Services | Verificação de Certificados</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-    
+
 <body>
-    <h1>Bem-vindo à Saupa Services</h1>
+
+<header>
+    <h1>Saupa Services</h1>
     <p>Sistema de Verificação de Certificados</p>
-    <p>Em breve você poderá validar certificados emitidos pela Saupa Services.</p>
-  <script src="js/script.js"></script>  
+</header>
+
+<section class="container">
+
+    <h2>Validar Certificado</h2>
+
+    <p>
+        Digite o código do certificado para confirmar a sua autenticidade.
+    </p>
+
+    <input 
+        type="text" 
+        id="codigoCertificado" 
+        placeholder="Ex: SAUPA-2026-001"
+    >
+
+    <button onclick="verificarCertificado()">
+        Verificar Certificado
+    </button>
+
+    <div id="resultado"></div>
+
+</section>
+
+<footer>
+    <p>© 2026 Saupa Services</p>
+    <p>Treinamento prático para competências reais.</p>
+</footer>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
