@@ -24,32 +24,9 @@ function verificarCertificado(){
         }
 
         else if(certificado){
-          window.location.href = "certificado.html?codigo=" + certificado.codigo;  
+            
+    window.location.href = "certificado.html?codigo=" + certificado.codigo;
 
-            resultado.innerHTML = `
-
-            <div class="certificado">
-
-            <h3>✅ Certificado Válido</h3>
-
-            <p><strong>Nome:</strong> ${certificado.nome}</p>
-
-            <p><strong>Curso:</strong> ${certificado.curso}</p>
-
-            <p><strong>Carga Horária:</strong> ${certificado.carga}</p>
-
-            <p><strong>Data de Emissão:</strong> ${certificado.data}</p>
-
-            <p><strong>Código:</strong> ${certificado.codigo}</p>
-
-            <div class="selo">
-            Saupa Services<br>
-            Certificado Autêntico
-            </div>
-
-            </div>
-
-            `;
 
         }
 
