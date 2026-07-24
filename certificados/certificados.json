@@ -1,1 +1,25 @@
+[
+    {
+        "codigo": "SAUPA-2026-001",
+        "nome": "João Manuel António",
+        "curso": "Informática Profissional",
+        "carga": "40 horas",
+        "data": "24/07/2026"
+    },
 
+    {
+        "codigo": "SAUPA-2026-002",
+        "nome": "Maria José Francisco",
+        "curso": "Microsoft Excel Avançado",
+        "carga": "30 horas",
+        "data": "24/07/2026"
+    },
+
+    {
+        "codigo": "SAUPA-2026-003",
+        "nome": "Pedro António Manuel",
+        "curso": "Programação Arduino",
+        "carga": "50 horas",
+        "data": "24/07/2026"
+    }
+]
