@@ -6,80 +6,70 @@ function verificarCertificado(){
     let codigo = document.getElementById("codigoCertificado").value;
     let resultado = document.getElementById("resultado");
 
-    // Base de dados inicial de certificados
-    let certificados = {
+    fetch("certificados/certificados.json")
+    .then(resposta => resposta.json())
+    .then(certificados => {
 
-        "SAUPA-2026-001": {
-            nome: "João Manuel António",
-            curso: "Informática Profissional",
-            carga: "40 horas",
-            data: "24/07/2026"
-        },
+        let certificado = certificados.find(
+            item => item.codigo === codigo
+        );
 
-        "SAUPA-2026-002": {
-            nome: "Maria José Francisco",
-            curso: "Microsoft Excel Avançado",
-            carga: "30 horas",
-            data: "24/07/2026"
-        },
 
-        "SAUPA-2026-003": {
-            nome: "Pedro António Manuel",
-            curso: "Programação Arduino",
-            carga: "50 horas",
-            data: "24/07/2026"
+        if(codigo === ""){
+
+            resultado.innerHTML = `
+            ⚠️ Digite o código do certificado.
+            `;
+
         }
 
-    };
+        else if(certificado){
 
+            resultado.innerHTML = `
 
-    if(codigo === ""){
+            <div class="certificado">
+
+            <h3>✅ Certificado Válido</h3>
+
+            <p><strong>Nome:</strong> ${certificado.nome}</p>
+
+            <p><strong>Curso:</strong> ${certificado.curso}</p>
+
+            <p><strong>Carga Horária:</strong> ${certificado.carga}</p>
+
+            <p><strong>Data de Emissão:</strong> ${certificado.data}</p>
+
+            <p><strong>Código:</strong> ${certificado.codigo}</p>
+
+            <div class="selo">
+            Saupa Services<br>
+            Certificado Autêntico
+            </div>
+
+            </div>
+
+            `;
+
+        }
+
+        else{
+
+            resultado.innerHTML = `
+            ❌ Certificado não encontrado.
+            `;
+
+        }
+
+    })
+
+    .catch(erro => {
 
         resultado.innerHTML = `
-        ⚠️ Digite o código do certificado.
+        ⚠️ Erro ao carregar a base de certificados.
         `;
 
-    }
+        console.log(erro);
 
-    else if(certificados[codigo]){
-
-        let certificado = certificados[codigo];
-
-        resultado.innerHTML = `
-
-<div class="certificado">
-
-<h3>✅ Certificado Válido</h3>
-
-<p><strong>Nome:</strong> ${certificado.nome}</p>
-
-<p><strong>Curso:</strong> ${certificado.curso}</p>
-
-<p><strong>Carga Horária:</strong> ${certificado.carga}</p>
-
-<p><strong>Data de Emissão:</strong> ${certificado.data}</p>
-
-<p><strong>Código:</strong> ${codigo}</p>
-
-<div class="selo">
-Saupa Services<br>
-Certificado Autêntico
-</div>
-
-</div>
-
-`;
-
-    }
-
-    else{
-
-        resultado.innerHTML = `
-        ❌ Certificado não encontrado.
-        `;
-
-    }
+    });
 
 }
-
-
