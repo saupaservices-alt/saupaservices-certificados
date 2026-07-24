@@ -111,3 +111,39 @@ footer a{
         font-size:26px;
     }
 }
+
+/* Cartão de certificado validado */
+
+.certificado{
+    margin-top:30px;
+    padding:25px;
+    background:#ffffff;
+    border:3px solid #003366;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+    text-align:left;
+}
+
+.certificado h3{
+    text-align:center;
+    color:#008000;
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.certificado p{
+    margin:10px 0;
+    font-size:16px;
+}
+
+.certificado strong{
+    color:#003366;
+}
+
+.selo{
+    text-align:center;
+    margin-top:20px;
+    font-size:18px;
+    color:#ff7a00;
+    font-weight:bold;
+}
