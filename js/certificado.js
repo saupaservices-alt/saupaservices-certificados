@@ -7,6 +7,7 @@ alert("certificado.js funcionando");
 let parametros = new URLSearchParams(window.location.search);
 
 let codigo = parametros.get("codigo");
+alert(codigo);
 
 let areaCertificado = document.getElementById("certificado");
 
